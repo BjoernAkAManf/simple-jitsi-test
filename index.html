@@ -1,0 +1,24 @@
+<html itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    </head>
+    <body>
+        <script src="https://pagecdn.io/lib/faker/3.1.0/locales/de/faker.de.js"></script>
+        <script src="https://meet.jit.si/external_api.js"></script>
+        <script>
+            const name = faker.internet.userName();
+            var domain = "meet.jit.si";
+            var options = {
+                roomName: "d340fd23-ce14-4afc-b016-1362fa01c8a6",
+                parentNode: undefined,
+                configOverwrite: {},
+                interfaceConfigOverwrite: {
+                    // filmStripOnly: true
+                }
+            }
+            var api = new JitsiMeetExternalAPI(domain, options);
+            api.executeCommand('displayName', name);
+        </script>
+    </body>
+</html>
